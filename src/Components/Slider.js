@@ -1,10 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import PostCard from "./PostCard";
-import Button from "@material-ui/core/Button";
 import axios from "axios";
-import CreateIcon from "@material-ui/icons/Create";
-
 
 // wrapper for items
 class Slider extends React.Component {
@@ -39,31 +36,11 @@ class Slider extends React.Component {
         this.setState({ itemRows: itemRows });
       });
   }
+
   render() {
     const { itemRows } = this.state;
-
     return (
       <div>
-        <div><img className='bg'
-         src={'https://images.pexels.com/photos/373892/pexels-photo-373892.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'}
-         style={{width: "1410px", height: "356px"}}
-         />
-         </div>
-        <Button
-          size="large"
-          variant="contained"
-          startIcon={<CreateIcon />}
-          color="primary"
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            width: "362px",
-            marginLeft: "523px",
-            borderRadius: "18px",
-            marginTop: "12px"
-          }}
-        >
-          Write a Blog
-        </Button>
         <Grid container spacing={1}>
           {itemRows.map((row, id) =>
             row.map((item, key) => <PostCard {...item} key={key} />)
@@ -73,4 +50,5 @@ class Slider extends React.Component {
     );
   }
 }
+
 export default Slider;

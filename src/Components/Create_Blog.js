@@ -1,154 +1,108 @@
-// import React from 'react';
-// import TextField from '@material-ui/core/TextField';
-// import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import Button from "@material-ui/core/Button";
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     '& .MuiTextField-root': {
-//       margin: theme.spacing(1),
-//       width: '25ch',
-//     },
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  },
+}));
 
+export default function CenteredGrid() {
+  const classes = useStyles();
 
-
-//   return (
-//     <form  noValidate autoComplete="off">
-//       <div>
-//         <TextField required id="standard-required" label="Required" defaultValue="Hello World" />
-//         <TextField disabled id="standard-disabled" label="Disabled" defaultValue="Hello World" />
-//         <TextField
-//           id="standard-password-input"
-//           label="Password"
-//           type="password"
-//           autoComplete="current-password"
-//         />
-//         <TextField
-//           id="standard-read-only-input"
-//           label="Read Only"
-//           defaultValue="Hello World"
-//           InputProps={{
-//             readOnly: true,
-//           }}
-//         />
-//         <TextField
-//           id="standard-number"
-//           label="Number"
-//           type="number"
-//           InputLabelProps={{
-//             shrink: true,
-//           }}
-//         />
-//         <TextField id="standard-search" label="Search field" type="search" />
-//         <TextField
-//           id="standard-helperText"
-//           label="Helper text"
-//           defaultValue="Default Value"
-//           helperText="Some important text"
-//         />
-//       </div>
-//       <div>
-//         <TextField
-//           required
-//           id="filled-required"
-//           label="Required"
-//           defaultValue="Hello World"
-//           variant="filled"
-//         />
-//         <TextField
-//           disabled
-//           id="filled-disabled"
-//           label="Disabled"
-//           defaultValue="Hello World"
-//           variant="filled"
-//         />
-//         <TextField
-//           id="filled-password-input"
-//           label="Password"
-//           type="password"
-//           autoComplete="current-password"
-//           variant="filled"
-//         />
-//         <TextField
-//           id="filled-read-only-input"
-//           label="Read Only"
-//           defaultValue="Hello World"
-//           InputProps={{
-//             readOnly: true,
-//           }}
-//           variant="filled"
-//         />
-//         <TextField
-//           id="filled-number"
-//           label="Number"
-//           type="number"
-//           InputLabelProps={{
-//             shrink: true,
-//           }}
-//           variant="filled"
-//         />
-//         <TextField id="filled-search" label="Search field" type="search" variant="filled" />
-//         <TextField
-//           id="filled-helperText"
-//           label="Helper text"
-//           defaultValue="Default Value"
-//           helperText="Some important text"
-//           variant="filled"
-//         />
-//       </div>
-//       <div>
-//         <TextField
-//           required
-//           id="outlined-required"
-//           label="Required"
-//           defaultValue="Hello World"
-//           variant="outlined"
-//         />
-//         <TextField
-//           disabled
-//           id="outlined-disabled"
-//           label="Disabled"
-//           defaultValue="Hello World"
-//           variant="outlined"
-//         />
-//         <TextField
-//           id="outlined-password-input"
-//           label="Password"
-//           type="password"
-//           autoComplete="current-password"
-//           variant="outlined"
-//         />
-//         <TextField
-//           id="outlined-read-only-input"
-//           label="Read Only"
-//           defaultValue="Hello World"
-//           InputProps={{
-//             readOnly: true,
-//           }}
-//           variant="outlined"
-//         />
-//         <TextField
-//           id="outlined-number"
-//           label="Number"
-//           type="number"
-//           InputLabelProps={{
-//             shrink: true,
-//           }}
-//           variant="outlined"
-//         />
-//         <TextField id="outlined-search" label="Search field" type="search" variant="outlined" />
-//         <TextField
-//           id="outlined-helperText"
-//           label="Helper text"
-//           defaultValue="Default Value"
-//           helperText="Some important text"
-//           variant="outlined"
-//         />
-//       </div>
-//     </form>
-//   );
-
-
-
-// export default Createblog;
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper
+            className={classes.paper}
+            style={{
+              fontSize: "44px",
+              fontFamily: "Poppins",
+              color: "#5e72eb",
+            }}
+          >
+            Write a Blog{" "}
+          </Paper>
+        </Grid>
+        {/* Grid1 */}
+        <Grid item xs={3}></Grid>
+        <Grid item xs={6}>
+          <TextField
+            id="outlined-full-width"
+            style={{ margin: 8 }}
+            placeholder="Blog Title"
+            fullWidth
+            margin="normal"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={3}></Grid>
+        {/* Grid2 */}
+        <Grid item xs={3}></Grid>
+        <Grid item xs={3}>
+          <TextField
+            id="outlined-full-width"
+            style={{ margin: 8, color: "ButtonFace" }}
+            placeholder="Upload Image"
+            fullWidth
+            margin="normal"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Button
+            style={{marginTop:"8px", width:"173px", height:"55px", color:"#5e72eb"}}
+            variant="contained"
+            size="large"
+            className={classes.button}
+            startIcon={<CloudUploadIcon />}
+          >
+            Upload
+          </Button>
+        </Grid>
+        <Grid item xs={3}></Grid>
+        {/* Grid3 */}
+        <Grid item xs={3}></Grid>
+        <Grid item xs={6}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            placeholder="Write awesome things about your Blog..."
+            multiline
+            rows={42}
+            rowsMax={18}
+            size="123px"
+          ></TextField>
+        </Grid>
+        <Grid item xs={3}></Grid>
+        {/* Grid3 */}
+        <Grid item xs={3}></Grid>
+        <Grid item xs={3}></Grid>
+        <Grid item xs={6}>
+        <Button variant="contained" size="medium" color="primary">
+        <ArrowDownwardIcon fontSize="inherit" />
+          Submit
+        </Button>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}

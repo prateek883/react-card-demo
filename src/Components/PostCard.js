@@ -1,11 +1,12 @@
 import React from "react";
 import ShortenText from "../utils/ShortenText";
 import ToText from "../utils/ToText";
-import VisibilitySharp from '@material-ui/icons/Visibility';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ChatBubbleSharpIcon from '@material-ui/icons/ChatBubbleSharp';
-import ShareSharpIcon from '@material-ui/icons/ShareSharp';
-import { faUser, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import VisibilitySharp from "@material-ui/icons/Visibility";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareSharpIcon from "@material-ui/icons/ShareSharp";
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   makeStyles,
@@ -52,7 +53,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     margin: `${muiBaseTheme.spacing(2)}px 0`,
   },
   heading: {
-    fontFamily:"Poppins, sans-serif",
+    fontFamily: "sans-serif",
     fontSize: "18px",
     fontWeight: "bold",
     color: "#5e72eb",
@@ -136,9 +137,10 @@ export default function MediumCard(props) {
     " " +
     splitMonth[0];
   const d = new Date();
+  const [value, setValue] = React.useState(0);
 
-  return ( 
-      <Grid xs={12} sm={12} lg={4} className={classes.grid}>
+  return (
+    <Grid xs={12} sm={12} lg={4} className={classes.grid}>
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={props.thumbnail}>
           {d.getHours() >= 5 && d.getHours() <= 20 ? (
@@ -221,7 +223,7 @@ export default function MediumCard(props) {
               <FontAwesomeIcon icon={faUser} /> {props.author}
             </Typography>
           </Grid>
-          <Grid>
+          {/* <Grid>
             <Typography
               display="block"
               variant="body1"
@@ -233,12 +235,21 @@ export default function MediumCard(props) {
               gutterBottom
             >
               <FontAwesomeIcon icon={faCalendarAlt} /> {finalDate}
-            </Typography>            
-          </Grid>
-          <VisibilitySharp style={{color: "#5e72eb", fontSize: 21, position:"relative", cursor: "pointer", marginLeft: "16px"}}/>
-          <FavoriteIcon style={{color: "#5e72eb", fontSize: 21, cursor: "pointer"}}/>
-          <ChatBubbleSharpIcon style={{color: "#5e72eb", fontSize: 21, cursor: "pointer"}}/>
-          <ShareSharpIcon style={{color: "#5e72eb", fontSize: 21, cursor: "pointer"}}/> 
+            </Typography>
+          </Grid> */}
+          <BottomNavigation
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+            showLabels
+            className={classes.root}
+            style={{marginLeft:"14px",Color:"#5e72eb" , fontSize: "24px"}}
+          >
+            <BottomNavigationAction label="view" icon={<VisibilitySharp />} />
+            <BottomNavigationAction label="Like" icon={<FavoriteIcon />} />
+            <BottomNavigationAction label="share" icon={<ShareSharpIcon />} />
+          </BottomNavigation>
         </CardActions>
       </Card>
     </Grid>
