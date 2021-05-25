@@ -6,9 +6,7 @@ import Button from "@material-ui/core/Button";
 import SendIcon from "@material-ui/icons/Send";
 import WallpaperIcon from "@material-ui/icons/Wallpaper";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-// import Logo from "../images/logo.png";
-import Container from "@material-ui/core/Container";
-
+import Logo from "../images/undraw_Blog_post_re_fy5x.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,8 +24,7 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Container maxWidth="lg"></Container>
-      <Grid container>
+      <Grid container spacing={2}>
         {/* Grid for Blog Title1 */}
         <Grid item xs={2}>
           <ArrowBackIosIcon
@@ -54,9 +51,7 @@ export default function CenteredGrid() {
             WRITE A BLOG
           </h1>
         </Grid>
-        <Grid item xs={2}>
-          {/* <img src={Logo} alt="Logo" style={{ marginRight: "136px", marginTop:"26px" }}></img> */}
-        </Grid>
+        <Grid item xs={2}></Grid>
         <Grid item xs={2}>
           <h5
             style={{
@@ -73,9 +68,7 @@ export default function CenteredGrid() {
         </Grid>
         {/* Grid for Blog Title name 2 */}
         <Grid item xs={5}></Grid>
-        <Grid item xs={2}
-        >
-        </Grid>
+        <Grid item xs={2}></Grid>
         <Grid item xs={2}></Grid>
         <Grid item xs={3}></Grid>
 
@@ -88,7 +81,7 @@ export default function CenteredGrid() {
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
-              marginTop: "42px",
+              marginTop: "23px",
             }}
           >
             Blog Title
@@ -96,8 +89,13 @@ export default function CenteredGrid() {
         </Grid>
         <Grid item xs={6}>
           <TextField
-            style={{ margin: 3, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)" }}
+            style={{
+              margin: 3,
+              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
+              fontFamily: "Gotham",
+            }}
             fullWidth
+            placeholder="Blog Tilte"
             margin="small"
             variant="outlined"
           />
@@ -142,7 +140,7 @@ export default function CenteredGrid() {
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
-              marginTop: "5px",
+              marginTop: "12px",
             }}
           >
             Upload Content Image
@@ -154,7 +152,7 @@ export default function CenteredGrid() {
             color="default"
             style={{
               position: "absolute",
-              marginTop: "6px",
+              marginTop: "12px",
             }}
           >
             <WallpaperIcon />
@@ -183,7 +181,7 @@ export default function CenteredGrid() {
             color="default"
             style={{
               position: "absolute",
-              marginTop: "6px",
+              marginTop: "21px",
             }}
           >
             <WallpaperIcon />
@@ -192,26 +190,34 @@ export default function CenteredGrid() {
         <Grid item xs={5}></Grid>
 
         {/* Grid for Publish Button */}
-        <Container maxWidth="md">
-        <Grid item md={1}></Grid>
-        <Grid item md={3}>
-        </Grid>
-        <Grid item xs={4}>
-        <Button
-            variant="contained"
-            style={{
-              position: "absolute",
-              width: "173px",
-              backgroundColor: "#6074E3",
-              color: "#fff",
-            }}
+        <Grid container item xs={12}>
+          <Grid item xs={4}></Grid>
+          <Grid item xs={4}>
+            <Button
+              variant="contained"
+              style={{
+                width: "173px",
+                backgroundColor: "#6074E3",
+                color: "#fff"
+              }}
+            >
+              <SendIcon />
+              Publish
+            </Button>
+          </Grid>
+          <Grid
+            item xs={4}
+            container
+            direction="column"
+            alignItems="flex-end"
           >
-            <SendIcon />
-            Publish
-          </Button>
+            <img
+              src={Logo}
+              alt="Logo"
+              style={{ width: "196px", bottom: "486px" }}
+            ></img>
+          </Grid>
         </Grid>
-        <Grid item xs={4}></Grid>
-        </Container>
       </Grid>
     </div>
   );
