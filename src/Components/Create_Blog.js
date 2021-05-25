@@ -1,11 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import Button from "@material-ui/core/Button";
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import PublishIcon from "@material-ui/icons/Publish";
+import WallpaperIcon from "@material-ui/icons/Wallpaper";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import Logo from "../images/undraw_blogging_vpvv.svg";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,84 +25,179 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper
+      <Container maxWidth="lg"></Container>
+      <Grid container spacing={1}>
+        {/* Grid for Blog Title1 */}
+        <Grid item xs={2}>
+          <ArrowBackIosIcon
+            style={{
+              color: "#6074E3",
+              fontSize: "45px",
+              marginLeft: "55px",
+              marginTop: "38px",
+              cursor: "pointer",
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} alignItems="stretch">
+          <h1
             className={classes.paper}
             style={{
-              fontSize: "44px",
-              fontFamily: "Poppins",
-              color: "#5e72eb",
+              fontSize: "30px",
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              color: "#646464",
             }}
           >
-            Write a Blog{" "}
-          </Paper>
+            W R I T E<br />A BLOG
+          </h1>
         </Grid>
-        {/* Grid1 */}
-        <Grid item xs={3}></Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          <h5
+            style={{
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              color: "#6074E3",
+              fontSize: "26px",
+              marginTop: "42px",
+            }}
+          >
+            Ostello
+          </h5>
+        </Grid>
+
+        {/* Grid for Blog Title name 2 */}
+
+        {/* Grid for Blog Title Name */}
+        <Grid item xs={1}></Grid>
+        <Grid item xs={2}>
+          <h5
+            style={{
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              fontSize: "16px",
+              marginTop: "42px",
+            }}
+          >
+            Blog Title
+          </h5>
+        </Grid>
         <Grid item xs={6}>
           <TextField
-            id="outlined-full-width"
-            style={{ margin: 8 }}
-            placeholder="Blog Title"
+            style={{ margin: 3 }}
             fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
+            margin="small"
             variant="outlined"
           />
         </Grid>
         <Grid item xs={3}></Grid>
-        {/* Grid2 */}
-        <Grid item xs={3}></Grid>
-        <Grid item xs={3}>
-          <TextField
-            id="outlined-full-width"
-            style={{ margin: 8, color: "ButtonFace" }}
-            placeholder="Upload Image"
-            fullWidth
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
+
+        {/* Grid for Blog Story Content*/}
+        <Grid item xs={1}></Grid>
+        <Grid item xs={2}>
+          <h5
+            style={{
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              fontSize: "16px",
+              marginTop: "42px",
             }}
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Button
-            style={{marginTop:"8px", width:"173px", height:"55px", color:"#5e72eb"}}
-            variant="contained"
-            size="large"
-            className={classes.button}
-            startIcon={<CloudUploadIcon />}
           >
-            Upload
-          </Button>
+            Tell us your story
+          </h5>
         </Grid>
-        <Grid item xs={3}></Grid>
-        {/* Grid3 */}
-        <Grid item xs={3}></Grid>
         <Grid item xs={6}>
           <TextField
             fullWidth
             variant="outlined"
-            placeholder="Write awesome things about your Blog..."
             multiline
             rows={42}
-            rowsMax={18}
-            size="123px"
+            rowsMax={12}
           ></TextField>
         </Grid>
         <Grid item xs={3}></Grid>
-        {/* Grid3 */}
+
+        {/* Grid for Content Image */}
+        <Grid item xs={1}></Grid>
+        <Grid item xs={2}>
+          <h5
+            style={{
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              fontSize: "16px",
+            }}
+          >
+            Upload Content Image
+          </h5>
+        </Grid>
+        <Grid item xs={4}>
+          <Button
+            variant="contained"
+            color="default"
+            style={{
+              position: "absolute",
+              marginTop: "6px",
+            }}
+          >
+            <WallpaperIcon />
+          </Button>
+        </Grid>
         <Grid item xs={3}></Grid>
+        <Grid item xs={2}></Grid>
+
+        {/* Grid for Cover Image */}
+        <Grid item xs={1}></Grid>
+        <Grid item xs={2}>
+          <h5
+            style={{
+              fontFamily: "Gotham",
+              fontStyle: "normal",
+              fontWeight: "bold",
+              fontSize: "16px",
+            }}
+          >
+            Upload Cover Image
+          </h5>
+        </Grid>
+        <Grid item xs={4}>
+          <Button
+            variant="contained"
+            color="default"
+            style={{
+              position: "absolute",
+              marginTop: "6px",
+            }}
+          >
+            <WallpaperIcon />
+          </Button>
+        </Grid>
+        <Grid item xs={5}></Grid>
+
+        {/* Grid for Publish Button */}
+        <Grid item md={4}></Grid>
+        <Grid item md={3}>
+          <Button
+            variant="primary"
+            style={{
+              position: "absolute",
+              width: "173px",
+              backgroundColor: "#6074E3",
+              color: "#fff",
+            }}
+          >
+            <PublishIcon />
+            Publish
+          </Button>
+        </Grid>
         <Grid item xs={3}></Grid>
-        <Grid item xs={6}>
-        <Button variant="contained" size="medium" color="primary">
-        <ArrowDownwardIcon fontSize="inherit" />
-          Submit
-        </Button>
+        <Grid item xs={2} justify="space-evenly">
+          <img src={Logo} alt="Logo" style={{ width: "166px" }}></img>
         </Grid>
       </Grid>
     </div>
