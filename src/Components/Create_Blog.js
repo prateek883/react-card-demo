@@ -3,11 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import PublishIcon from "@material-ui/icons/Publish";
+import SendIcon from "@material-ui/icons/Send";
 import WallpaperIcon from "@material-ui/icons/Wallpaper";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import Logo from "../images/undraw_blogging_vpvv.svg";
+// import Logo from "../images/logo.png";
 import Container from "@material-ui/core/Container";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,16 +27,17 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root}>
       <Container maxWidth="lg"></Container>
-      <Grid container spacing={1}>
+      <Grid container>
         {/* Grid for Blog Title1 */}
         <Grid item xs={2}>
           <ArrowBackIosIcon
+            variant="contained"
             style={{
               color: "#6074E3",
-              fontSize: "45px",
               marginLeft: "55px",
               marginTop: "38px",
               cursor: "pointer",
+              fontSize: "42px",
             }}
           />
         </Grid>
@@ -46,14 +48,15 @@ export default function CenteredGrid() {
               fontSize: "30px",
               fontFamily: "Gotham",
               fontStyle: "normal",
-              fontWeight: "bold",
-              color: "#646464",
+              color: "#6074E3",
             }}
           >
-            W R I T E<br />A BLOG
+            WRITE A BLOG
           </h1>
         </Grid>
-        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+          {/* <img src={Logo} alt="Logo" style={{ marginRight: "136px", marginTop:"26px" }}></img> */}
+        </Grid>
         <Grid item xs={2}>
           <h5
             style={{
@@ -61,15 +64,20 @@ export default function CenteredGrid() {
               fontStyle: "normal",
               fontWeight: "bold",
               color: "#6074E3",
-              fontSize: "26px",
+              fontSize: "18px",
               marginTop: "42px",
             }}
           >
             Ostello
           </h5>
         </Grid>
-
         {/* Grid for Blog Title name 2 */}
+        <Grid item xs={5}></Grid>
+        <Grid item xs={2}
+        >
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={3}></Grid>
 
         {/* Grid for Blog Title Name */}
         <Grid item xs={1}></Grid>
@@ -88,7 +96,7 @@ export default function CenteredGrid() {
         </Grid>
         <Grid item xs={6}>
           <TextField
-            style={{ margin: 3 }}
+            style={{ margin: 3, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)" }}
             fullWidth
             margin="small"
             variant="outlined"
@@ -113,6 +121,9 @@ export default function CenteredGrid() {
         </Grid>
         <Grid item xs={6}>
           <TextField
+            style={{
+              boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
+            }}
             fullWidth
             variant="outlined"
             multiline
@@ -124,13 +135,14 @@ export default function CenteredGrid() {
 
         {/* Grid for Content Image */}
         <Grid item xs={1}></Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} spacing={2}>
           <h5
             style={{
               fontFamily: "Gotham",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
+              marginTop: "5px",
             }}
           >
             Upload Content Image
@@ -180,10 +192,13 @@ export default function CenteredGrid() {
         <Grid item xs={5}></Grid>
 
         {/* Grid for Publish Button */}
-        <Grid item md={4}></Grid>
+        <Container maxWidth="md">
+        <Grid item md={1}></Grid>
         <Grid item md={3}>
-          <Button
-            variant="primary"
+        </Grid>
+        <Grid item xs={4}>
+        <Button
+            variant="contained"
             style={{
               position: "absolute",
               width: "173px",
@@ -191,14 +206,12 @@ export default function CenteredGrid() {
               color: "#fff",
             }}
           >
-            <PublishIcon />
+            <SendIcon />
             Publish
           </Button>
         </Grid>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={2} justify="space-evenly">
-          <img src={Logo} alt="Logo" style={{ width: "166px" }}></img>
-        </Grid>
+        <Grid item xs={4}></Grid>
+        </Container>
       </Grid>
     </div>
   );
