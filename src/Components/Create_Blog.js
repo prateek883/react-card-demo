@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import SendIcon from "@material-ui/icons/Send";
+import PublishRoundedIcon from '@material-ui/icons/PublishRounded';
 import WallpaperIcon from "@material-ui/icons/Wallpaper";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import Logo from "../images/ostello_logo.png";
@@ -55,14 +55,14 @@ export default function CenteredGrid() {
 
               }}
             >
-              WRITE 
+              W R I T E
               <Typography style={{
                 fontSize:"35px",
                 fontFamily:"Calibri",
                 fontWeight:"bold",
                 color:"#6074E3"
               }}>
-                A BLOG
+              A  BLOG
               </Typography>
             </Typography>
           </Grid>
@@ -72,8 +72,8 @@ export default function CenteredGrid() {
             src={Logo}
             alt="Logo"
             style={{
-              marginLeft:"8rem",
-              width: "126px",
+              marginLeft:"10rem",
+              width: "146px",
               bottom: "486px",
               marginTop: "28px",
               cursor: "pointer",
@@ -136,7 +136,7 @@ export default function CenteredGrid() {
             variant="outlined"
             multiline
             rows={42}
-            rowsMax={12}
+            rowsMax={8}
           ></TextField>
         </Grid>
         <Grid item xs={3}></Grid>
@@ -204,13 +204,13 @@ export default function CenteredGrid() {
           <Grid item xs={4}>
             <Button
               variant="contained"
+              startIcon={<PublishRoundedIcon />}
               style={{
-                width: "173px",
+                width: "193px",
                 backgroundColor: "#6074E3",
                 color: "#fff",
               }}
             >
-              <SendIcon />
               Publish
             </Button>
           </Grid>
@@ -219,8 +219,7 @@ export default function CenteredGrid() {
               src={Blog1}
               alt="Blog1"
               style={{
-                width: "196px",
-                cursor: "pointer",
+                width: "226px",
               }}
             ></img>
           </Grid>

@@ -9,7 +9,7 @@ import { Typography } from "@material-ui/core";
 import Logo from "../images/ostello_logo.png";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Logo2 from "../images/undraw_Blog_post_re_fy5x.svg";
+import Logo2 from "../images/undraw_Development_re_g5hq.svg";
 
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo_img: {
     marginLeft: "8rem",
-    width: "126px",
+    width: "226px",
     bottom: "486px",
     marginTop: "6rem",
     cursor: "pointer",
@@ -152,9 +152,9 @@ export default function FullWidthGrid() {
             alt="Logo2"
             style={{
               width: "416px",
-              height: "356px",
+              height: "376px",
               cursor: "pointer",
-              marginTop: "12rem",
+              marginTop: "12rem"
             }}
           ></img>
         </Grid>
