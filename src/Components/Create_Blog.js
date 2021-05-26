@@ -6,7 +6,9 @@ import Button from "@material-ui/core/Button";
 import SendIcon from "@material-ui/icons/Send";
 import WallpaperIcon from "@material-ui/icons/Wallpaper";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import Logo from "../images/undraw_Blog_post_re_fy5x.svg";
+import Logo from "../images/ostello_logo.png";
+import Blog1 from "../images/undraw_Blog_post_re_fy5x.svg";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +26,7 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={0}>
         {/* Grid for Blog Title1 */}
         <Grid item xs={2}>
           <ArrowBackIosIcon
@@ -38,46 +40,54 @@ export default function CenteredGrid() {
             }}
           />
         </Grid>
-        <Grid item xs={6} alignItems="stretch">
-          <h1
-            className={classes.paper}
-            style={{
-              fontSize: "30px",
-              fontFamily: "Gotham",
-              fontStyle: "normal",
-              color: "#6074E3",
-            }}
-          >
-            WRITE A BLOG
-          </h1>
+        <Grid item xs={6}>
+          <Grid>
+            <Typography
+              className={classes.paper}
+              style={{
+                fontSize: "38px",
+                fontFamily: "Calibri",
+                color: "#646464",
+                textAlign: "center",
+                fontWeight:'bolder',
+                display: 'flex',
+                flexDirection: 'column'
+
+              }}
+            >
+              WRITE 
+              <Typography style={{
+                fontSize:"35px",
+                fontFamily:"Calibri",
+                fontWeight:"bold",
+                color:"#6074E3"
+              }}>
+                A BLOG
+              </Typography>
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={2}>
-          <h5
+        <Grid item xs={4}>
+          <img
+            src={Logo}
+            alt="Logo"
             style={{
-              fontFamily: "Gotham",
-              fontStyle: "normal",
-              fontWeight: "bold",
-              color: "#6074E3",
-              fontSize: "18px",
-              marginTop: "42px",
+              marginLeft:"8rem",
+              width: "126px",
+              bottom: "486px",
+              marginTop: "28px",
+              cursor: "pointer",
             }}
-          >
-            Ostello
-          </h5>
+          ></img>
         </Grid>
         {/* Grid for Blog Title name 2 */}
-        <Grid item xs={5}></Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}></Grid>
 
         {/* Grid for Blog Title Name */}
         <Grid item xs={1}></Grid>
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Gotham",
+              fontFamily: "Calibri",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -92,7 +102,7 @@ export default function CenteredGrid() {
             style={{
               margin: 3,
               boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
-              fontFamily: "Gotham",
+              fontFamily: "Calibri",
             }}
             fullWidth
             placeholder="Blog Tilte"
@@ -107,7 +117,7 @@ export default function CenteredGrid() {
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Gotham",
+              fontFamily: "Calibri",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -136,7 +146,7 @@ export default function CenteredGrid() {
         <Grid item xs={2} spacing={2}>
           <h5
             style={{
-              fontFamily: "Gotham",
+              fontFamily: "Calibri",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -158,15 +168,14 @@ export default function CenteredGrid() {
             <WallpaperIcon />
           </Button>
         </Grid>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={2}></Grid>
+        <Grid item xs={5}></Grid>
 
         {/* Grid for Cover Image */}
         <Grid item xs={1}></Grid>
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Gotham",
+              fontFamily: "Calibri",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -198,23 +207,21 @@ export default function CenteredGrid() {
               style={{
                 width: "173px",
                 backgroundColor: "#6074E3",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <SendIcon />
               Publish
             </Button>
           </Grid>
-          <Grid
-            item xs={4}
-            container
-            direction="column"
-            alignItems="flex-end"
-          >
+          <Grid item xs={4} container direction="column" alignItems="flex-end">
             <img
-              src={Logo}
-              alt="Logo"
-              style={{ width: "196px", bottom: "486px" }}
+              src={Blog1}
+              alt="Blog1"
+              style={{
+                width: "196px",
+                cursor: "pointer",
+              }}
             ></img>
           </Grid>
         </Grid>
