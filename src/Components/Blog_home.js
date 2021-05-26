@@ -1,3 +1,5 @@
+
+// BLog Home Updated
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -92,6 +94,14 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     fontSize: "72px",
   },
+  article_heading:{
+    fontFamily:"Calibri",
+    fontWeight:"normal",
+    color:"#2F2F2F",
+    fontSize:"43px",
+    textAlign:"center",
+    letterSpacing:"0.15rem"
+  }
 }));
 
 export default function FullWidthGrid() {
@@ -99,8 +109,8 @@ export default function FullWidthGrid() {
 
   return (
     <div>
-      <Grid container spacing={3}>
-        <Grid item xs={8}>
+      <Grid container spacing={3} style={{backgroundColor:"#FFF9F9"}}>
+        <Grid item xs={7}>
           <Typography>
             <img className={classes.logo_img} src={Logo} alt="Logo"></img>
           </Typography>
@@ -146,12 +156,12 @@ export default function FullWidthGrid() {
             Get Started
           </Button>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <img
             src={Logo2}
             alt="Logo2"
             style={{
-              width: "416px",
+              width: "396px",
               height: "376px",
               cursor: "pointer",
               marginTop: "12rem"
@@ -160,6 +170,9 @@ export default function FullWidthGrid() {
         </Grid>
         <Grid item xs={12}>
           <ExpandMoreIcon className={classes.arrow_card_down} />
+        </Grid>
+        <Grid item xs={12}>
+          <h5  className={classes.article_heading}>ARTICLES</h5>
         </Grid>
       </Grid>
     </div>
