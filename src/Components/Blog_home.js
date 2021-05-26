@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: "313px",
     marginLeft: "8rem",
     marginTop: "0.8rem",
+    boxShadow:" 0px 4px 5px rgba(0, 0, 0, 0.1)"
   },
   paper: {
     padding: theme.spacing(2),
@@ -108,8 +109,7 @@ export default function FullWidthGrid() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
             magna massa vitae amet purus.
             <br />
-            Consequat tincidunt in blandit mattis nulla eu, turpis ut. Sem in
-            diam arcu et ac vel sed. Sed nunc sit
+            Consequat tincidunt in blandit mattis nulla eu, turpis ut.
           </Typography>
           <Typography className={classes.subscribe_heading}>
             Subscribe now, amazing contets on your way!
