@@ -9,6 +9,7 @@ import { Typography } from "@material-ui/core";
 import Logo from "../images/ostello_logo.png";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Logo2 from "../images/undraw_Blog_post_re_fy5x.svg";
 
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     width: "313px",
     marginLeft: "8rem",
     marginTop: "0.8rem",
-    boxShadow:" 0px 4px 5px rgba(0, 0, 0, 0.1)"
   },
   paper: {
     padding: theme.spacing(2),
@@ -85,13 +85,13 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     fontSize: "83px",
   },
-  arrow_card_down:{
+  arrow_card_down: {
     color: "#6074E3",
     marginLeft: "6.5rem",
     marginTop: "38px",
     cursor: "pointer",
     fontSize: "72px",
-  }
+  },
 }));
 
 export default function FullWidthGrid() {
@@ -106,8 +106,7 @@ export default function FullWidthGrid() {
           </Typography>
           <Typography className={classes.Blog_Name}>Excellence</Typography>
           <Typography className={classes.home_info}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
-            magna massa vitae amet purus.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             <br />
             Consequat tincidunt in blandit mattis nulla eu, turpis ut.
           </Typography>
@@ -115,8 +114,10 @@ export default function FullWidthGrid() {
             Subscribe now, amazing contets on your way!
           </Typography>
           <Paper component="form" className={classes.root1}>
-            <IconButton className={classes.iconButton} aria-label="menu">
-            </IconButton>
+            <IconButton
+              className={classes.iconButton}
+              aria-label="menu"
+            ></IconButton>
             <InputBase
               className={classes.input}
               placeholder="Jondoeostello579@gmail.com"
@@ -130,7 +131,7 @@ export default function FullWidthGrid() {
               <CheckCircleOutlineOutlinedIcon style={{ color: "green" }} />
             </IconButton>
           </Paper>
-          <Button className={classes.subscribetbn}
+          <Button
             variant="contained"
             size="large"
             style={{
@@ -144,11 +145,21 @@ export default function FullWidthGrid() {
           >
             Get Started
           </Button>
-           
         </Grid>
-        <Grid item xs={4}></Grid>
+        <Grid item xs={4}>
+          <img
+            src={Logo2}
+            alt="Logo2"
+            style={{
+              width: "416px",
+              height: "356px",
+              cursor: "pointer",
+              marginTop: "12rem",
+            }}
+          ></img>
+        </Grid>
         <Grid item xs={12}>
-        <ExpandMoreIcon  className={classes.arrow_card_down}/>
+          <ExpandMoreIcon className={classes.arrow_card_down} />
         </Grid>
       </Grid>
     </div>
