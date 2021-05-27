@@ -29,13 +29,13 @@ import Profile6 from "../images/profile6.jfif";
 
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: "2rem",
     borderRadius: "22px",
-    boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
-  },
+    },
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
   Readmore: {
     color: " rgba(55, 43, 255, 1)",
     cursor: "pointer",
-    fontFamily: "Calibri"
+    fontFamily: "Calibri",
+    marginLeft:"0.1rem"
   },
   avatar: {
     width: "3rem",
@@ -60,8 +61,9 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root1}>
       <Grid container spacing={5}>
-        <Grid item xs={4}>
-          <Card className={classes.root}>
+        <Grid item xs={1}></Grid>
+        <Grid item xs={3}>
+          <Card className={classes.root} theme>
             <img
               src={Card1}
               alt="Card1"
@@ -107,7 +109,7 @@ export default function CenteredGrid() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Card className={classes.root}>
             <img
               src={Card2}
@@ -154,7 +156,7 @@ export default function CenteredGrid() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <Card className={classes.root}>
             <img
               src={Card3}
@@ -202,6 +204,7 @@ export default function CenteredGrid() {
           </Card>
         </Grid>
       </Grid>
+      <Grid item xs={1}></Grid>
       <Grid container spacing={5} style={{backgroundColor:"#FFF9F9"}}>
         <Grid item xs={4}>
           <Card className={classes.root}>

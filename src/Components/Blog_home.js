@@ -15,6 +15,9 @@ import Logo2 from "../images/undraw_Development_re_g5hq.svg";
 import Blog_card_list from "./Blog_card_list";
 import Pagination_blog from "./Pagination_blog";
 
+
+
+
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     color:"#2F2F2F",
     fontSize:"43px",
     textAlign:"center",
-    letterSpacing:"0.15rem"
+    letterSpacing:"0.25rem"
   }
 }));
 
