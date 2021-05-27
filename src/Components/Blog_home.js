@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "6.5rem",
     marginTop: "38px",
     cursor: "pointer",
-    fontSize: "72px",
+    fontSize: "102px",
   },
   article_heading:{
     fontFamily:"Calibri",
@@ -112,7 +112,7 @@ export default function FullWidthGrid() {
   return (
     <div>
       <Grid container spacing={3} style={{backgroundColor:"#FFF9F9"}}>
-        <Grid item xs={7}>
+        <Grid item xs={5}>
           <Typography>
             <img className={classes.logo_img} src={Logo} alt="Logo"></img>
           </Typography>
@@ -133,7 +133,7 @@ export default function FullWidthGrid() {
             <InputBase
               className={classes.input}
               placeholder="Jondoeostello579@gmail.com"
-              inputProps={{ "aria-label": "search google maps" }}
+              inputProps={{ "aria-label": "subscribe for blog updates" }}
             />
             <IconButton
               color="primary"
@@ -158,12 +158,12 @@ export default function FullWidthGrid() {
             Get Started
           </Button>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={6}>
           <img
             src={Logo2}
             alt="Logo2"
             style={{
-              width: "396px",
+              fontSize:"102px",
               height: "376px",
               cursor: "pointer",
               marginTop: "12rem"

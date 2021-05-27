@@ -3,19 +3,31 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
+import ThumbUpAltRoundedIcon from '@material-ui/icons/ThumbUpAltRounded';
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 import Card1 from "../images/card1.jpg";
 import Card2 from "../images/card2.jpg";
 import Card3 from "../images/card3.jpg";
-import ChatBubbleTwoToneIcon from "@material-ui/icons/ChatBubbleTwoTone";
+import Card4 from "../images/card4.jfif";
+import Card5 from "../images/card5.jfif";
+import Card6 from "../images/card6.jfif";
+import ChatBubbleRoundedIcon from '@material-ui/icons/ChatBubbleRounded';
+import Profile1 from "../images/profile1.jfif";
+import Profile2 from "../images/profile2.jfif";
+import Profile3 from "../images/profile3.jfif";
+import Profile4 from "../images/profile4.jfif";
+import Profile5 from "../images/profile5.jfif";
+import Profile6 from "../images/profile6.jfif";
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
     color: " rgba(55, 43, 255, 1)",
     cursor: "pointer",
     fontFamily: "Calibri"
+  },
+  avatar: {
+    width: "3rem",
+    height: "3rem",
+    borderRadius: "50%",
+    top: -51,
+    boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
   },
 }));
 
@@ -54,7 +73,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile1} alt={Profile1} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -77,10 +96,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -101,7 +120,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile2} alt={Profile2} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -124,10 +143,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -148,7 +167,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile3} alt={Profile3} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -171,10 +190,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -187,8 +206,8 @@ export default function CenteredGrid() {
         <Grid item xs={4}>
           <Card className={classes.root}>
             <img
-              src={Card1}
-              alt="Card1"
+              src={Card4}
+              alt="Card4"
               style={{
                 width: "452px",
                 height: "15.8rem",
@@ -197,7 +216,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile4} alt={Profile4} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -220,10 +239,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -234,8 +253,8 @@ export default function CenteredGrid() {
         <Grid item xs={4}>
           <Card className={classes.root}>
             <img
-              src={Card3}
-              alt="Card3"
+              src={Card5}
+              alt="Card5"
               style={{
                 width: "452px",
                 height: "15.8rem",
@@ -244,7 +263,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile5} alt={Profile5} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -267,10 +286,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -281,8 +300,8 @@ export default function CenteredGrid() {
         <Grid item xs={4}>
           <Card className={classes.root}>
             <img
-              src={Card1}
-              alt="Card1"
+              src={Card6}
+              alt="Card6"
               style={{
                 width: "452px",
                 height: "15.8rem",
@@ -291,7 +310,7 @@ export default function CenteredGrid() {
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
+                  <img src={Profile6} alt={Profile6} style={{width:"45px"}}></img>
                 </Avatar>
               }
               action={<IconButton aria-label="settings"></IconButton>}
@@ -314,10 +333,10 @@ export default function CenteredGrid() {
                 <VisibilityOutlinedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
+                <ThumbUpAltRoundedIcon />
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleTwoToneIcon />
+                <ChatBubbleRoundedIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
