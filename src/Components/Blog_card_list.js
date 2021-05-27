@@ -28,13 +28,13 @@ import Profile6 from "../images/profile6.jfif";
 
 
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginTop: "2rem",
     borderRadius: "22px",
+    width:"368px",
+    marginLeft:"4.1rem"
     },
   media: {
     height: 0,
@@ -44,13 +44,16 @@ const useStyles = makeStyles((theme) => ({
     color: " rgba(55, 43, 255, 1)",
     cursor: "pointer",
     fontFamily: "Calibri",
-    marginLeft:"0.1rem"
+    marginLeft:"0.1rem",
+    fontSize:"12px"
   },
   avatar: {
     width: "3rem",
     height: "3rem",
     borderRadius: "50%",
     top: -51,
+    fontFamily:"Calibri",
+    fontSize:"11px",
     boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
   },
 }));
@@ -60,10 +63,11 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root1}>
-      <Grid container spacing={5}>
-        <Grid item xs={1}></Grid>
-        <Grid item xs={3}>
-          <Card className={classes.root} theme>
+
+      {/* Grid 1 Card */}
+      <Grid container style={{backgroundColor:"#FFF9F9"}}>
+        <Grid item xs={4}>
+          <Card className={classes.root}>
             <img
               src={Card1}
               alt="Card1"
@@ -92,16 +96,16 @@ export default function CenteredGrid() {
             <CardActions disableSpacing>
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
-                aria-label="add to eye"
-                style={{ marginLeft: "10.2rem" }}
+                aria-label="add to favorites"
+                style={{ marginLeft: "6.1rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -109,7 +113,7 @@ export default function CenteredGrid() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Card className={classes.root}>
             <img
               src={Card2}
@@ -140,15 +144,15 @@ export default function CenteredGrid() {
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
                 aria-label="add to favorites"
-                style={{ marginLeft: "10.2rem" }}
+                style={{ marginLeft: "6.1rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -156,7 +160,7 @@ export default function CenteredGrid() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Card className={classes.root}>
             <img
               src={Card3}
@@ -187,15 +191,15 @@ export default function CenteredGrid() {
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
                 aria-label="add to favorites"
-                style={{ marginLeft: "10.2rem" }}
+                style={{ marginLeft: "6.8rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -204,8 +208,10 @@ export default function CenteredGrid() {
           </Card>
         </Grid>
       </Grid>
-      <Grid item xs={1}></Grid>
-      <Grid container spacing={5} style={{backgroundColor:"#FFF9F9"}}>
+
+
+      {/* Grid 2 Card */}
+      <Grid container style={{backgroundColor:"#FFF9F9", marginTop:"6rem"}}>
         <Grid item xs={4}>
           <Card className={classes.root}>
             <img
@@ -237,15 +243,15 @@ export default function CenteredGrid() {
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
                 aria-label="add to favorites"
-                style={{ marginLeft: "10.2rem" }}
+                style={{ marginLeft: "6.1rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -284,15 +290,15 @@ export default function CenteredGrid() {
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
                 aria-label="add to favorites"
-                style={{ marginLeft: "10.2rem" }}
+                style={{ marginLeft: "6.1rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
@@ -331,15 +337,15 @@ export default function CenteredGrid() {
               <h4 className={classes.Readmore}>Read More</h4>
               <IconButton
                 aria-label="add to favorites"
-                style={{ marginLeft: "10.2rem" }}
+                style={{ marginLeft: "6.8rem" }}
               >
-                <VisibilityOutlinedIcon />
+                <VisibilityOutlinedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ThumbUpAltRoundedIcon />
+                <ThumbUpAltRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="add to favorites">
-                <ChatBubbleRoundedIcon />
+                <ChatBubbleRoundedIcon style={{fontSize:"21px"}}/>
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
