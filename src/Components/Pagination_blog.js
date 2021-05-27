@@ -23,7 +23,7 @@ export default function PaginationRounded() {
         <Grid container spacing={2}>
         <Grid item spacing xs={4}>
         </Grid>
-        <Grid item spacing xs={4}>
+        <Grid item spacing xs={6}>
         <Button
             variant="contained"
             size="large"
@@ -32,15 +32,16 @@ export default function PaginationRounded() {
               backgroundColor: "#6074E3",
               color: "#fff",
               boxShadow: "0px 4px 10px rgba(46, 78, 255, 0.47)",
-              marginLeft: "0.8rem",
+              marginTop: "1.2rem",
               marginBottom: "1.2rem",
+              marginLeft:"3.5rem"
             }}
           >
             Write a Blog
           </Button>
-        <Pagination count={10} shape="rounded" />
+        <Pagination count={10} shape="rounded" style={{marginLeft:"3.5rem"}}/>
         </Grid>
-        <Grid item spacing xs={4}></Grid>
+        <Grid item spacing xs={2}></Grid>
         </Grid>
     </div>
   );

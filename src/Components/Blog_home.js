@@ -12,6 +12,8 @@ import Logo from "../images/ostello_logo.png";
 import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Logo2 from "../images/undraw_Development_re_g5hq.svg";
+import Blog_card_list from "./Blog_card_list";
+import Pagination_blog from "./Pagination_blog";
 
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
@@ -171,10 +173,12 @@ export default function FullWidthGrid() {
         <Grid item xs={12}>
           <ExpandMoreIcon className={classes.arrow_card_down} />
         </Grid>
-        <Grid item xs={12}>
+      </Grid>
+      <Grid item xs={12}>
           <h5  className={classes.article_heading}>ARTICLES</h5>
         </Grid>
-      </Grid>
+      <Blog_card_list/>
+      <Pagination_blog/>
     </div>
   );
 }
