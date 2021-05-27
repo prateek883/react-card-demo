@@ -10,6 +10,7 @@ import Logo from "../images/ostello-png-1-2@2x.png";
 import Vector1 from "../images/vector-64@1x.svg";
 import Vector2 from "../images/vector-65@1x.svg";
 import { Typography } from "@material-ui/core";
+import fonts from "../Components/fonts.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,7 +86,7 @@ export default function CenteredGrid() {
               fontStyle: "normal",
               fontWeight: "bold",
               FontSize: "22.6787px",
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               width:"60.66px",
               color:"#6074E3",
               marginLeft:"9rem",
@@ -102,7 +103,7 @@ export default function CenteredGrid() {
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -135,7 +136,7 @@ export default function CenteredGrid() {
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
@@ -167,12 +168,13 @@ export default function CenteredGrid() {
         <Grid item xs={2} spacing={2}>
           <h5
             style={{
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
               marginTop: "12px",
             }}
+            
           >
             Upload Content Image
           </h5>
@@ -204,7 +206,7 @@ export default function CenteredGrid() {
         <Grid item xs={2}>
           <h5
             style={{
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
