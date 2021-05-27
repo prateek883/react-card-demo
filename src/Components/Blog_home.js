@@ -1,4 +1,3 @@
-
 // BLog Home Updated
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
@@ -14,9 +13,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Logo2 from "../images/undraw_Development_re_g5hq.svg";
 import Blog_card_list from "./Blog_card_list";
 import Pagination_blog from "./Pagination_blog";
-
-
-
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   home_info: {
     marginLeft: "8rem",
-    fontSize: "16px",
+    fontSize: "12px",
     color: "#474747",
     fontFamily: "Calibri",
     fontStyle: "normal",
@@ -64,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#2F2F2F",
     marginLeft: "8rem",
     fontStyle: "bold",
-    fontSize: "16px",
+    fontSize: "12px",
     fontFamily: "Calibri",
     marginTop: "5rem",
   },
@@ -76,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 5px rgba(0, 0, 0, 0.1)",
   },
   input: {
-    marginLeft: theme.spacing(0),
+    marginLeft: theme.spacing(1),
     flex: 1,
   },
   iconButton: {
@@ -99,14 +98,14 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     fontSize: "102px",
   },
-  article_heading:{
-    fontFamily:"Calibri",
-    fontWeight:"normal",
-    color:"#2F2F2F",
-    fontSize:"43px",
-    textAlign:"center",
-    letterSpacing:"0.25rem"
-  }
+  article_heading: {
+    fontFamily: "Calibri",
+    fontWeight: "normal",
+    color: "#2F2F2FF",
+    fontSize: "43px",
+    textAlign: "center",
+    letterSpacing: "0.25rem",
+  },
 }));
 
 export default function FullWidthGrid() {
@@ -114,25 +113,26 @@ export default function FullWidthGrid() {
 
   return (
     <div>
-      <Grid container spacing={3} style={{backgroundColor:"#FFF9F9"}}>
+      <Grid
+        container
+        spacing={3}
+        style={{ backgroundColor: "#FFF9F9", height: "734px" }}
+      >
         <Grid item xs={5}>
           <Typography>
             <img className={classes.logo_img} src={Logo} alt="Logo"></img>
           </Typography>
           <Typography className={classes.Blog_Name}>Excellence</Typography>
           <Typography className={classes.home_info}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  nulla eu, turpis ut. Sem in diam arcu et ac vel sed. Sed nunc sit mauris id lorem imperdiet tellus mattis.
             <br />
+            Condimentum magna massa vitae amet purus. Consequat tincidunt in blandit mattis
             Consequat tincidunt in blandit mattis nulla eu, turpis ut.
           </Typography>
           <Typography className={classes.subscribe_heading}>
             Subscribe now, amazing contets on your way!
           </Typography>
           <Paper component="form" className={classes.root1}>
-            <IconButton
-              className={classes.iconButton}
-              aria-label="menu"
-            ></IconButton>
             <InputBase
               className={classes.input}
               placeholder="Jondoeostello579@gmail.com"
@@ -156,6 +156,7 @@ export default function FullWidthGrid() {
               boxShadow: "0px 4px 10px rgba(46, 78, 255, 0.47)",
               marginLeft: "8rem",
               marginTop: "1.2rem",
+              textTransform:"Uppercase"
             }}
           >
             Get Started
@@ -166,22 +167,38 @@ export default function FullWidthGrid() {
             src={Logo2}
             alt="Logo2"
             style={{
-              fontSize:"102px",
-              height: "376px",
+              fontSize: "31px",
+              height: "252px",
               cursor: "pointer",
-              marginTop: "12rem"
+              marginTop: "18rem",
             }}
           ></img>
+        </Grid>
+        <Grid item xs={1}>
+            <FacebookIcon
+              style={{
+                marginTop: "14.8rem",
+                marginLeft: "2.5rem",
+                color: "#959BAB",
+                cursor: "pointer"
+              }}
+            />
+            <br />
+            <br />
+            <InstagramIcon style={{ marginLeft: "2.5rem", color: "#959BAB",cursor: "pointer" }} />
+            <br />
+            <br />
+            <LinkedInIcon style={{ marginLeft: "2.5rem", color: "#959BAB",cursor: "pointer" }} />
         </Grid>
         <Grid item xs={12}>
           <ExpandMoreIcon className={classes.arrow_card_down} />
         </Grid>
       </Grid>
       <Grid item xs={12}>
-          <h5  className={classes.article_heading}>ARTICLES</h5>
-        </Grid>
-      <Blog_card_list/>
-      <Pagination_blog/>
+        <h5 className={classes.article_heading}>ARTICLES</h5>
+      </Grid>
+      <Blog_card_list />
+      <Pagination_blog />
     </div>
   );
 }
