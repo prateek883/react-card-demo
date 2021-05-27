@@ -10,7 +10,7 @@ import Logo from "../images/ostello-png-1-2@2x.png";
 import Vector1 from "../images/vector-64@1x.svg";
 import Vector2 from "../images/vector-65@1x.svg";
 import { Typography } from "@material-ui/core";
-import fonts from "../Components/fonts.css";
+import  "../Components/fonts.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -116,16 +116,13 @@ export default function CenteredGrid() {
         <Grid item xs={6}>
           <TextField
             style={{
-              margin: 3,
               boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
-              fontFamily: "Calibri",
+              fontFamily: "Gotham-bold",
               backgroundColor:"#FFFFFF",
               borderRadius:"12px",
-              width:"881px"
+              width:"881px",
             }}
             fullWidth
-            placeholder="Blog Tilte"
-            margin="small"
             variant="outlined"
           />
         </Grid>
@@ -158,7 +155,7 @@ export default function CenteredGrid() {
             fullWidth
             multiline
             rows={42}
-            rowsMax={8}
+            rowsMax={0}
           ></TextField>
         </Grid>
         <Grid item xs={3}></Grid>
