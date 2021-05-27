@@ -3,11 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import PublishRoundedIcon from '@material-ui/icons/PublishRounded';
+import PublishRoundedIcon from "@material-ui/icons/PublishRounded";
 import WallpaperIcon from "@material-ui/icons/Wallpaper";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import Logo from "../images/ostello_logo.png";
-import Blog1 from "../images/undraw_Blog_post_re_fy5x.svg";
+// import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import Logo from "../images/ostello-png-1-2@2x.png";
+import Vector1 from "../images/vector-64@1x.svg";
+import Vector2 from "../images/vector-65@1x.svg";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,16 +30,13 @@ export default function CenteredGrid() {
       <Grid container spacing={0}>
         {/* Grid for Blog Title1 */}
         <Grid item xs={2}>
-          <ArrowBackIosIcon
-            variant="contained"
+          <img
+            src={Vector1}
+            alt="Vector1"
             style={{
-              color: "#6074E3",
-              marginLeft: "55px",
-              marginTop: "38px",
-              cursor: "pointer",
-              fontSize: "42px",
+              width: "323px",
             }}
-          />
+          ></img>
         </Grid>
         <Grid item xs={6}>
           <Grid>
@@ -49,37 +47,54 @@ export default function CenteredGrid() {
                 fontFamily: "Calibri",
                 color: "#646464",
                 textAlign: "center",
-                fontWeight:'bolder',
-                display: 'flex',
-                flexDirection: 'column'
-
+                fontWeight: "bolder",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               W R I T E
-              <Typography style={{
-                fontSize:"35px",
-                fontFamily:"Calibri",
-                fontWeight:"bold",
-                color:"#6074E3"
-              }}>
-              A  BLOG
+              <Typography
+                style={{
+                  fontSize: "35px",
+                  fontFamily: "Calibri",
+                  fontWeight: "bold",
+                  color: "#6074E3",
+                }}
+              >
+                A BLOG
               </Typography>
             </Typography>
           </Grid>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={1}>
           <img
             src={Logo}
             alt="Logo"
             style={{
-              marginLeft:"10rem",
-              width: "146px",
-              bottom: "486px",
+              marginLeft: "14rem",
+              width: "30.88px",
+              height: "30px",
               marginTop: "28px",
               cursor: "pointer",
             }}
           ></img>
-        </Grid>
+          </Grid>
+          <Grid item xs={3}>
+          <h5
+            style={{
+              fontStyle: "normal",
+              fontWeight: "bold",
+              FontSize: "22.6787px",
+              fontFamily: "Calibri",
+              width:"60.66px",
+              color:"#6074E3",
+              marginLeft:"9rem",
+              marginTop:"2rem"
+            }}
+          >
+            Ostello
+          </h5>
+          </Grid>
         {/* Grid for Blog Title name 2 */}
 
         {/* Grid for Blog Title Name */}
@@ -103,6 +118,9 @@ export default function CenteredGrid() {
               margin: 3,
               boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
               fontFamily: "Calibri",
+              backgroundColor:"#FFFFFF",
+              borderRadius:"12px",
+              width:"881px"
             }}
             fullWidth
             placeholder="Blog Tilte"
@@ -121,7 +139,7 @@ export default function CenteredGrid() {
               fontStyle: "normal",
               fontWeight: "bold",
               fontSize: "16px",
-              marginTop: "42px",
+              marginTop: "42px"
             }}
           >
             Tell us your story
@@ -131,9 +149,12 @@ export default function CenteredGrid() {
           <TextField
             style={{
               boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
+              marginLeft:"0.3rem",
+              width:"881px",
+              height:"180px",
+              borderRadius:"12px"
             }}
             fullWidth
-            variant="outlined"
             multiline
             rows={42}
             rowsMax={8}
@@ -163,9 +184,17 @@ export default function CenteredGrid() {
             style={{
               position: "absolute",
               marginTop: "12px",
+              marginLeft:"0.3rem",
+              width:"69px",
+              backgroundColor:"#FFFFFF",
+              boxShadow:"0px 4px 12px rgba(0, 0, 0, 0.16)",
+              borderRadius:"12px"
             }}
           >
-            <WallpaperIcon />
+            <WallpaperIcon style={{
+              width:"39px",
+              height:"39px"
+            }}/>
           </Button>
         </Grid>
         <Grid item xs={5}></Grid>
@@ -191,35 +220,51 @@ export default function CenteredGrid() {
             style={{
               position: "absolute",
               marginTop: "21px",
+              marginLeft:"0.3rem",
+              width:"69px",
+              backgroundColor:"#FFFFFF",
+              boxShadow:"0px 4px 12px rgba(0, 0, 0, 0.16)",
+              borderRadius:"12px"
             }}
           >
-            <WallpaperIcon />
+            <WallpaperIcon style={{
+              width:"39px",
+              height:"39px"
+            }}/>
           </Button>
         </Grid>
         <Grid item xs={5}></Grid>
 
         {/* Grid for Publish Button */}
         <Grid container item xs={12}>
-          <Grid item xs={4}></Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}></Grid>
+          <Grid item xs={3}>
             <Button
               variant="contained"
-              startIcon={<PublishRoundedIcon />}
+              startIcon={<PublishRoundedIcon style={{
+                width:"24px",
+                height:"23.5px",
+              }}/>}
               style={{
-                width: "193px",
+                width: "179px",
                 backgroundColor: "#6074E3",
                 color: "#fff",
+                marginLeft:"0.3rem",
+                height:"59px",
+                fontSize:"22.5085px",
+                marginTop:"2.8rem"
               }}
             >
               Publish
             </Button>
           </Grid>
-          <Grid item xs={4} container direction="column" alignItems="flex-end">
+          <Grid item xs={6} container direction="column" alignItems="flex-end">
             <img
-              src={Blog1}
-              alt="Blog1"
+              src={Vector2}
+              alt="Vector2"
               style={{
-                width: "226px",
+                marginTop: "1.8rem",
+                width: "236px",
               }}
             ></img>
           </Grid>

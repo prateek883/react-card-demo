@@ -27,8 +27,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: "313px",
-    marginLeft: "8rem",
+    marginLeft: "150px",
     marginTop: "0.8rem",
+    boxShadow: "0px 4px 5px rgba(0, 0, 0, 0.1)",
   },
   paper: {
     padding: theme.spacing(2),
@@ -36,36 +37,41 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   Blog_Name: {
-    fontSize: "43px",
+    fontSize: "42.0249px",
     fontFamily: "Calibri",
-    FontWeight: "Italic",
+    FontWeight: "bold",
     color: "#6A6A6A",
-    marginLeft: "8rem",
-    marginTop: "1rem",
+    marginLeft: "150px",
+    top: "238px",
+    lineHeight: "40px",
+    fontStyle: "normal",
   },
   logo_img: {
-    marginLeft: "8rem",
-    width: "226px",
+    marginLeft: "150px",
+    width: "199.44px",
     bottom: "486px",
     marginTop: "6rem",
     cursor: "pointer",
-    height: "56px",
+    height: "64.51px",
   },
   home_info: {
-    marginLeft: "8rem",
+    marginLeft: "150px",
     fontSize: "12px",
     color: "#474747",
     fontFamily: "Calibri",
     fontStyle: "normal",
     fontWeight: "normal",
+    width: "448px",
+    lineHeight: "13px",
   },
   subscribe_heading: {
     color: "#2F2F2F",
-    marginLeft: "8rem",
+    marginLeft: "150px",
     fontStyle: "bold",
     fontSize: "12px",
     fontFamily: "Calibri",
     marginTop: "5rem",
+    lineHeight: "13px",
   },
   text_susbcribe: {
     marginLeft: "8rem",
@@ -77,6 +83,8 @@ const useStyles = makeStyles((theme) => ({
   input: {
     marginLeft: theme.spacing(1),
     flex: 1,
+    borderRadius: "9px",
+    height: "55px",
   },
   iconButton: {
     padding: 10,
@@ -93,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
   },
   arrow_card_down: {
     color: "#6074E3",
-    marginLeft: "6.5rem",
-    marginTop: "38px",
+    marginLeft: "134px",
+    marginTop: "8px",
     cursor: "pointer",
     fontSize: "102px",
   },
@@ -124,10 +132,11 @@ export default function FullWidthGrid() {
           </Typography>
           <Typography className={classes.Blog_Name}>Excellence</Typography>
           <Typography className={classes.home_info}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  nulla eu, turpis ut. Sem in diam arcu et ac vel sed. Sed nunc sit mauris id lorem imperdiet tellus mattis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. nulla eu,
+            turpis ut. Sem in diam arcu et ac vel sed. Sed nunc sit mauris id
+            lorem imperdiet tellus mattis.
             <br />
-            Condimentum magna massa vitae amet purus. Consequat tincidunt in blandit mattis
-            Consequat tincidunt in blandit mattis nulla eu, turpis ut.
+            Condimentum magna massa vitae amet purus. 
           </Typography>
           <Typography className={classes.subscribe_heading}>
             Subscribe now, amazing contets on your way!
@@ -150,13 +159,13 @@ export default function FullWidthGrid() {
             variant="contained"
             size="large"
             style={{
-              width: "321px",
+              width: "317px",
               backgroundColor: "#6074E3",
               color: "#fff",
               boxShadow: "0px 4px 10px rgba(46, 78, 255, 0.47)",
-              marginLeft: "8rem",
+              marginLeft: "150px",
               marginTop: "1.2rem",
-              textTransform:"Uppercase"
+              height: "57px",
             }}
           >
             Get Started
@@ -168,27 +177,49 @@ export default function FullWidthGrid() {
             alt="Logo2"
             style={{
               fontSize: "31px",
-              height: "252px",
+              width: "664px",
+              height: "322px",
               cursor: "pointer",
-              marginTop: "18rem",
+              marginTop: "281px",
             }}
           ></img>
         </Grid>
         <Grid item xs={1}>
-            <FacebookIcon
-              style={{
-                marginTop: "14.8rem",
-                marginLeft: "2.5rem",
-                color: "#959BAB",
-                cursor: "pointer"
-              }}
-            />
-            <br />
-            <br />
-            <InstagramIcon style={{ marginLeft: "2.5rem", color: "#959BAB",cursor: "pointer" }} />
-            <br />
-            <br />
-            <LinkedInIcon style={{ marginLeft: "2.5rem", color: "#959BAB",cursor: "pointer" }} />
+          <InstagramIcon
+            style={{
+              marginLeft: "2.5rem",
+              color: "#959BAB",
+              cursor: "pointer",
+              opacity: "0.6",
+              width: "37.31px",
+              height: "37.2px",
+              marginTop: "10rem",
+            }}
+          />
+
+          <br />
+          <br />
+          <FacebookIcon
+            style={{
+              marginLeft: "2.5rem",
+              color: "#959BAB",
+              cursor: "pointer",
+              width: "37.31px",
+              height: "37.2px",
+            }}
+          />
+          <br />
+          <br />
+          <LinkedInIcon
+            style={{
+              marginLeft: "2.5rem",
+              color: "#959BAB",
+              cursor: "pointer",
+              opacity: "0.6",
+              width: "37.31px",
+              height: "37.2px",
+            }}
+          />
         </Grid>
         <Grid item xs={12}>
           <ExpandMoreIcon className={classes.arrow_card_down} />
