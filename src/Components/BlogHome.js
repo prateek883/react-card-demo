@@ -109,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "8px",
     cursor: "pointer",
     fontSize: "102px",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   article_heading: {
     fontFamily: "Gotham-Bold",
@@ -136,8 +139,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     marginTop:"5.6rem",
     marginLeft:"11rem",
-    cursor:"pointer"
+    cursor:"pointer",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
+  
 }));
 
 export default function FullWidthGrid() {
@@ -186,7 +193,7 @@ export default function FullWidthGrid() {
             variant="contained"
             size="large"
             style={{
-              width: "317px",
+              width: "321px",
               backgroundColor: "#6074E3",
               color: "#fff",
               boxShadow: "0px 4px 10px rgba(46, 78, 255, 0.47)",
@@ -224,6 +231,9 @@ export default function FullWidthGrid() {
               opacity: "0.6",
               width: "37.31px",
               height: "37.2px",
+              "&:hover": {
+                boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+              }
               // marginTop: "11rem",
             }}
           />
@@ -236,6 +246,9 @@ export default function FullWidthGrid() {
               cursor: "pointer",
               width: "37.31px",
               height: "37.2px",
+              "&:hover": {
+                boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+              }
             }}
           />
           <br />
@@ -248,6 +261,9 @@ export default function FullWidthGrid() {
               opacity: "0.6",
               width: "37.31px",
               height: "37.2px",
+              "&:hover": {
+                boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+              }
             }}
           />
           <Divider className={classes.divide2} orientation="vertical"></Divider>

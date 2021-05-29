@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
     height: "49px",
     fontSize: "19.5085px",
     marginTop: "2.8rem",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   text_title_blog: {
     boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",

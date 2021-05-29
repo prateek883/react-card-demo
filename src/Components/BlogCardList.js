@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "8.9rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   root1:{
     flexGrow: 1,
@@ -47,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "3.8rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   root2:{
     flexGrow: 1,
@@ -56,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "3.5rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   root3:{
     flexGrow: 1,
@@ -65,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "8.1rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   root4:{
     flexGrow: 1,
@@ -74,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "3.8rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   root5:{
     flexGrow: 1,
@@ -83,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "4.1rem",
     justifyContent:"space-evenly",
     boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
+    "&:hover": {
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   media: {
     height: 0,
