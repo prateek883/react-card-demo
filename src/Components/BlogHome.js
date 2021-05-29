@@ -16,7 +16,9 @@ import PaginationBlog from "./PaginationBlog";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import Divider from "@material-ui/core/Divider";
 import "../Components/fonts.css";
+import "../fonts/Gotham-Thin.otf";
 
 // CSS Codes
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     FontWeight: "bold",
     color: "#6A6A6A",
     marginLeft: "150px",
-    top: "238px",
+    marginTop: "2rem",
     lineHeight: "40px",
     fontStyle: "normal",
   },
@@ -56,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     height: "64.51px",
   },
   home_info: {
-    marginLeft: "150px",
+    marginLeft: "156px",
     fontSize: "12px",
     color: "#474747",
     fontFamily: "Calibri",
@@ -64,14 +66,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     width: "448px",
     lineHeight: "13px",
-    marginTop:"2rem"
+    marginTop: "2rem",
   },
   subscribe_heading: {
     color: "#2F2F2F",
     marginLeft: "150px",
     fontStyle: "bold",
     fontSize: "12px",
-    fontFamily: "Calibri",
+    fontFamily: "Gotham-bold",
     marginTop: "5rem",
     lineHeight: "13px",
   },
@@ -109,12 +111,32 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "102px",
   },
   article_heading: {
-    fontFamily: "Gotham-bold",
+    fontFamily: "Gotham-Bold",
     fontWeight: "normal",
     color: "#2F2F2FF",
     fontSize: "30px",
     textAlign: "center",
     letterSpacing: "0.25rem",
+  },
+  divide_line: {
+    height: "12rem",
+    marginLeft: "4rem",
+  },
+  divide2: {
+    height: "16rem",
+    marginLeft: "4rem",
+  },
+  Ostello_Name: {
+    display: "flex",
+    position: "relative",
+    fontFamily: "Gotham-bold",
+    fontSize: "33.7127px",
+    color: "#6074E3",
+    lineHeight: "32px",
+    flexWrap: "wrap",
+    marginTop:"5.6rem",
+    marginLeft:"11rem",
+    cursor:"pointer"
   },
 }));
 
@@ -122,15 +144,19 @@ export default function FullWidthGrid() {
   const classes = useStyles();
 
   return (
-    <div style={{ backgroundColor: "#FFF9F9", height: "734px", }}>
+    <div>
       <Grid
         container
         spacing={2}
+        style={{ backgroundColor: "#FFF9F9", height: "734px" }}
       >
         <Grid item xs={5} alignContent="start" lg={5}>
-          <Typography>
-            <img className={classes.logo_img} src={Logo} alt="Logo"></img>
-          </Typography>
+          <Grid container direction="row" alignItems="center">
+            <Grid item xs={1}>
+              <img className={classes.logo_img} src={Logo} alt="Logo" />
+            </Grid>
+            <Grid item className={classes.Ostello_Name} >Ostello</Grid>
+          </Grid>
           <Typography className={classes.Blog_Name}>Excellence</Typography>
           <Typography className={classes.home_info}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. nulla eu,
@@ -186,23 +212,26 @@ export default function FullWidthGrid() {
           ></img>
         </Grid>
         <Grid item xs={1}>
+          <Divider
+            className={classes.divide_line}
+            orientation="vertical"
+          ></Divider>
           <InstagramIcon
             style={{
-              marginLeft: "2.5rem",
+              marginLeft: "2.8rem",
               color: "#959BAB",
               cursor: "pointer",
               opacity: "0.6",
               width: "37.31px",
               height: "37.2px",
-              marginTop: "11rem",
+              // marginTop: "11rem",
             }}
           />
-
           <br />
           <br />
           <FacebookIcon
             style={{
-              marginLeft: "2.5rem",
+              marginLeft: "2.8rem",
               color: "#959BAB",
               cursor: "pointer",
               width: "37.31px",
@@ -213,7 +242,7 @@ export default function FullWidthGrid() {
           <br />
           <LinkedInIcon
             style={{
-              marginLeft: "2.5rem",
+              marginLeft: "2.8rem",
               color: "#959BAB",
               cursor: "pointer",
               opacity: "0.6",
@@ -221,6 +250,7 @@ export default function FullWidthGrid() {
               height: "37.2px",
             }}
           />
+          <Divider className={classes.divide2} orientation="vertical"></Divider>
         </Grid>
         <Grid item xs={12}>
           <ExpandMoreIcon className={classes.arrow_card_down} />
