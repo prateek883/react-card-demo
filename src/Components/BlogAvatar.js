@@ -72,8 +72,8 @@ export default function RecipeReviewCard() {
         <Button size="small" color="default">
           Comments         
         </Button>
-        <QuestionAnswerIcon style={{width:"14.22px",height:"14.22px",cursor:"pointer"}}/>
-        <TurnedInIcon style={{width:"14.22px",height:"14.22px",cursor:"pointer"}}/>
+        <QuestionAnswerIcon style={{width:"14.22px",height:"14.22px",cursor:"pointer",color:"#4E4E4E"}}/>
+        <TurnedInIcon style={{width:"14.22px",height:"14.22px",cursor:"pointer",color:"#4E4E4E"}}/>
       </CardActions>
       <Typography className={classes.date_blog}>Feb 4</Typography>
     </Card>
