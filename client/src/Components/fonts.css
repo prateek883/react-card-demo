@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Gotham-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham-Bold") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Gotham-Light";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham-Light") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Gotham-Thin";
+    font-style: normal;
+    font-weight: 900;
+    src: url("https://fonts.animaapp.com/Gotham-Thin") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Gotham-Black";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham-Black") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Gotham-Book";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham-Book") format("opentype");
+  }
