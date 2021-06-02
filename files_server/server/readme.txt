@@ -1,0 +1,1 @@
+place all the files in the above folders by looking at the similar structure in the server.

@@ -1,0 +1,56 @@
+{
+  "name": "blog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "content_image": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "string"
+    },
+    "selected": {
+      "type": "boolean",
+      "default": false
+    },
+    "date": {
+      "type": "date",
+      "required": true,
+      "default" : "$now"
+    },
+    "user_id": {
+      "type": "string",
+      "required": true
+    },
+    "suggestion": {
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "comments": {
+      "type": [
+        "blog-comments"
+      ]
+    },
+    "likes": {
+      "type": ["String"],
+      "required": false,
+      "default": []
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

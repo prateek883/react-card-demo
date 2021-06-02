@@ -1,0 +1,23 @@
+{
+  "name": "listedexam",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "examMainCategory": {
+      "type": "string",
+      "required": true
+    },
+    "examSubCategoryList": {
+      "type": [
+        "listedsubcategoryexam"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

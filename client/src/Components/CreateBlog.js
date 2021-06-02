@@ -67,17 +67,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2.8rem",
   },
   text_title_blog: {
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
+    // boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
     fontFamily: "Gotham-bold",
     backgroundColor: "#FFFFFF",
     borderRadius: "12px",
     width: "881px",
+    marginLeft: "3px"
   },
   story_text: {
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
+    // boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
     marginLeft: "0.3rem",
     width: "881px",
-    height: 180,
+    height: 181,
     borderRadius: "12px",
   },
   cover_btn_icon: {
@@ -178,13 +179,19 @@ export default function CenteredGrid() {
           <h5 className={classes.tell_us}>Tell us your story</h5>
         </Grid>
         <Grid item xs={6}>
-          <TextField className={classes.story_text}></TextField>
+        <TextField
+          className={classes.story_text}
+          multiline
+          rows={8}
+          variant="outlined"
+          borderLayout="none"
+        />
         </Grid>
         <Grid item xs={3}></Grid>
 
         {/* Grid for Content Image */}
         <Grid item xs={1}></Grid>
-        <Grid item xs={2} spacing={2}>
+        <Grid item xs={2} spacing={2}> 
           <h5 className={classes.cover_img}>Upload Cover Image</h5>
         </Grid>
         <Grid item xs={4}>
@@ -209,11 +216,6 @@ export default function CenteredGrid() {
           <h5 className={classes.content_img}>Upload Content Image</h5>
         </Grid>
         <Grid item xs={4}>
-          <input
-            accept="image/*"
-            id="contained-button-file"
-            type="file"
-          />
             <Button
             htmFor="contained-button-file"
               className={classes.content_btn_icon}

@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "location": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "institute": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "exam": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "course": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "state": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "city": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "address": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "package": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "coursePackage": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "material": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "user": {
+    "dataSource": "localhost",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "aboutUs": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "faculity": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "gallery": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "demoClasses": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "order": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "subscription": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "subscriptionOrder": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "toppers": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "contactUs": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "ratings": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "comments": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "messages": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "conversation": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "testimonials": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "qaChat": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "gender": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "careProgram": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "mockTest": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "questions": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "options": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "email",
+    "public": false
+  },
+  "upcomingEvents": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "instituteTestimonial": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "callbackrequest": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "courseCategory": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "courseSubCategory": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "blog": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "blog-comment": {
+    "dataSource": "localhost",
+    "public": false
+  },
+  "listedexam": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "listedsubcategoryexam": {
+    "dataSource": "localhost",
+    "public": false
+  }
+}
