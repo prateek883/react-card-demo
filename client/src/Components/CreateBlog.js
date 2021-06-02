@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     borderRadius: "12px",
     width: "881px",
-    marginLeft: "3px"
+    marginLeft: "3px",
   },
   story_text: {
     // boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.16)",
@@ -121,11 +121,10 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     fontSize: "62px",
   },
+  input: {
+    display: "none",
+  },
 }));
-
-
-
-
 
 export default function CenteredGrid() {
   const classes = useStyles();
@@ -179,46 +178,34 @@ export default function CenteredGrid() {
           <h5 className={classes.tell_us}>Tell us your story</h5>
         </Grid>
         <Grid item xs={6}>
-        <TextField
-          className={classes.story_text}
-          multiline
-          rows={8}
-          variant="outlined"
-          borderLayout="none"
-        />
+          <TextField
+            className={classes.story_text}
+            multiline
+            rows={8}
+            variant="outlined"
+            borderLayout="none"
+          />
         </Grid>
         <Grid item xs={3}></Grid>
 
         {/* Grid for Content Image */}
         <Grid item xs={1}></Grid>
-        <Grid item xs={2} spacing={2}> 
+        <Grid item xs={2} spacing={2}>
           <h5 className={classes.cover_img}>Upload Cover Image</h5>
         </Grid>
         <Grid item xs={4}>
-          <Button
-            className={classes.cover_btn_icon}
-            variant="contained"
-            color="default"
-          >
-            <WallpaperIcon
-              style={{
-                width: "39px",
-                height: "39px",
-              }}
-            />
-          </Button>
-        </Grid>
-        <Grid item xs={5}></Grid>
-
-        {/* Grid for Cover Image */}
-        <Grid item xs={1}></Grid>
-        <Grid item xs={2}>
-          <h5 className={classes.content_img}>Upload Content Image</h5>
-        </Grid>
-        <Grid item xs={4}>
+          <input
+            accept="image/*"
+            className={classes.input}
+            id="icon-button-file"
+            type="file"
+          />
+          <label htmlFor="icon-button-file">
             <Button
-            htmFor="contained-button-file"
-              className={classes.content_btn_icon}
+              color="primary"
+              aria-label="upload picture"
+              component="span"
+              className={classes.cover_btn_icon}
               variant="contained"
               color="default"
             >
@@ -229,6 +216,39 @@ export default function CenteredGrid() {
                 }}
               />
             </Button>
+          </label>
+        </Grid>
+        <Grid item xs={5}></Grid>
+
+        {/* Grid for Cover Image */}
+        <Grid item xs={1}></Grid>
+        <Grid item xs={2}>
+          <h5 className={classes.content_img}>Upload Content Image</h5>
+        </Grid>
+        <Grid item xs={4}>
+        <input
+            accept="image/*"
+            className={classes.input}
+            id="icon-button-file"
+            type="file"
+          />
+          <label htmlFor="icon-button-file">
+            <Button
+              color="primary"
+              aria-label="upload picture"
+              component="span"
+              className={classes.cover_btn_icon}
+              variant="contained"
+              color="default"
+            >
+              <WallpaperIcon
+                style={{
+                  width: "39px",
+                  height: "39px",
+                }}
+              />
+            </Button>
+          </label>
         </Grid>
         <Grid item xs={5}></Grid>
 
