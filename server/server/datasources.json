@@ -1,0 +1,50 @@
+{
+  "localhost": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "ostello",
+    "name": "localhost",
+    "connector": "mongodb"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage",
+    "maxFileSize": "1500000000"
+  },
+  "email": {
+    "name": "email",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "ostello.smtp@gmail.com",
+          "pass": "ostelloadminsmtp123"
+        }
+      }
+    ]
+  },
+  "mongoatlas": {
+    "host": "cluster0.lycqt.mongodb.net",
+    "port": 27017,
+    "url": "mongodb+srv://admin:pass123@cluster0.lycqt.mongodb.net/blogsdb?retryWrites=true&w=majority",
+    "database": "blogsdb",
+    "password": "pass123",
+    "name": "mongoatlas",
+    "user": "admin",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

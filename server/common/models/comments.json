@@ -1,0 +1,34 @@
+{
+  "name": "comments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "instituteName": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "number"
+    },
+    "dislikes": {
+      "type": "number"
+    },
+    "itemName": {
+      "type": "string"
+    },
+    "itemType": {
+      "type": "string"
+    },
+    "messages": {
+      "type": [
+        "messages"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

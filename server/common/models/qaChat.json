@@ -1,0 +1,20 @@
+{
+  "name": "qaChat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "location",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "countryName": {
+      "type": "string"
+    },
+    "counryCode": {
+      "type": "string"
+    },
+    "phonecode": {
+      "type": "string"
+    },
+    "state": {
+      "type": [
+        "state"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

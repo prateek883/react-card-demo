@@ -1,0 +1,35 @@
+{
+  "name": "mockTest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "testName": {
+      "type": "string"
+    },
+    "testType": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "timeAlloted": {
+      "type": "string"
+    },
+    "questions": {
+      "type": [
+        "questions"
+      ]
+    },
+    "theory": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

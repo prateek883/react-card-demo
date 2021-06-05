@@ -1,0 +1,36 @@
+{
+  "name": "package",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "examName": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "instituteName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "finalPrice": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

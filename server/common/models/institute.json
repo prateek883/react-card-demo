@@ -1,0 +1,83 @@
+{
+  "name": "institute",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "instituteImage": {
+      "type": "string"
+    },
+    "instituteName": {
+      "type": "string"
+    },
+    "isOnline": {
+      "type": "Boolean"
+    },
+    "isActive": {
+      "type": "Boolean"
+    },
+    "instituteType": {
+      "type": "string"
+    },
+    "instituteCode": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "pincode": {
+      "type": "number"
+    },
+    "subscriptionType": {
+      "type": "string"
+    },
+    "isVerified": {
+      "type": "Boolean",
+      "default": false
+    },
+    "subject": {
+      "type": [
+        "course"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY",
+      "property": "delete"
+    }
+  ],
+  "methods": {}
+}

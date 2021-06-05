@@ -11,7 +11,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import ShareIcon from "@material-ui/icons/Share";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-// import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+
 
 import Card7 from "../images/card7.jfif";
 import Card8 from "../images/card8.jfif";

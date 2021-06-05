@@ -1,0 +1,41 @@
+{
+  "name": "instituteTestimonial",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "Institute"
+    },
+    "studentName": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "string",
+      "required": true
+    },
+    "designation": {
+      "type": "string"
+    },
+    "instituteName": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

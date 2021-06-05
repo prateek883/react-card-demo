@@ -1,0 +1,42 @@
+{
+  "name": "exam",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "examName": {
+      "type": "string"
+    },
+    "isOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "course": {
+      "type": [
+        "course"
+      ]
+    },
+    "videoMaterial": {
+      "type": [
+        "material"
+      ]
+    },
+    "studyMaterial": {
+      "type": [
+        "material"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

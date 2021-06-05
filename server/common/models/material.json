@@ -1,0 +1,45 @@
+{
+  "name": "material",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "materialName": {
+      "type": "string"
+    },
+    "materialType": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "courseName": {
+      "type": "string"
+    },
+    "instituteName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "finalPrice": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

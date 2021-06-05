@@ -1,0 +1,65 @@
+{
+  "name": "course",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "courseName": {
+      "type": "string"
+    },
+    "courseType": {
+      "type": "string"
+    },
+    "isPopular": {
+      "type": "boolean",
+      "default": true
+    },
+    "isOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number",
+      "default": 0
+    },
+    "discount": {
+      "type": "number",
+      "default": 0
+    },
+    "offerDiscount": {
+      "type": "number",
+      "default": 0
+    },
+    "finalPrice": {
+      "type": "number",
+      "default": 0
+    },
+    "videoMaterial": {
+      "type": [
+        "material"
+      ]
+    },
+    "studyMaterial": {
+      "type": [
+        "material"
+      ]
+    },
+    "mockTest": {
+      "type": [
+        "mockTest"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

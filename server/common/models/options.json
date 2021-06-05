@@ -1,0 +1,27 @@
+{
+  "name": "options",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "A": {
+      "type": "string"
+    },
+    "B": {
+      "type": "string"
+    },
+    "C": {
+      "type": "string",
+      "default": true
+    },
+    "D": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

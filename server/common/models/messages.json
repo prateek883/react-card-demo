@@ -1,0 +1,25 @@
+{
+  "name": "messages",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "comment": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "conversation": {
+      "type": [
+        "conversation"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

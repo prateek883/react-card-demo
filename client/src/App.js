@@ -1,4 +1,5 @@
 import React from "react";
+// import { BrowserRouter, Route, } from 'react-router-dom'
 // import Slider from "./Components/Slider";
 import CreateBlog from "./Components/CreateBlog";
 // import BlogHome from "./Components/BlogHome";
@@ -7,7 +8,9 @@ import CreateBlog from "./Components/CreateBlog";
 import "./App.css";
 
 function App() {
-  return   <CreateBlog/>
+  return  (
+    <CreateBlog  />
+  ) 
 }
 
 export default App;

@@ -1,0 +1,66 @@
+{
+  "name": "careProgram",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "teenager": {
+      "type": "Boolean",
+      "default": false
+    },
+    "youngAdult": {
+      "type": "Boolean",
+      "default": false
+    },
+    "adult": {
+      "type": "Boolean",
+      "default": false
+    },
+    "old": {
+      "type": "Boolean",
+      "default": false
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "educational": {
+      "type": "Boolean",
+      "default": false
+    },
+    "mentalHealth": {
+      "type": "Boolean",
+      "default": false
+    },
+    "career": {
+      "type": "Boolean",
+      "default": false
+    },
+    "substanceAbuse": {
+      "type": "Boolean",
+      "default": false
+    },
+    "gender": {
+      "type": "string"
+    },
+    "callAMentor": {
+      "type": "Boolean",
+      "default": false
+    },
+    "messageAMentor": {
+      "type": "Boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
