@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import { Grid } from "@material-ui/core";
 import PostCard from "./PostCard";
 import axios from "axios";
-import MYCarousel from "./Card_carsousel";
+
 
 // wrapper for items
 class Slider extends Component {
@@ -45,7 +45,6 @@ class Slider extends Component {
     const { itemRows } = this.state;
     return (
       <div>
-        <MYCarousel/>
         <Grid container spacing={1}>
           {itemRows.map((row, id) =>
             row.map((item, key) => <PostCard {...item} key={key} />)

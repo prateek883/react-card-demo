@@ -6,8 +6,8 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareSharpIcon from "@material-ui/icons/ShareSharp";
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
+// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import {
   makeStyles,
   Avatar,
@@ -20,8 +20,17 @@ import {
   withStyles,
   Link,
   CardActions,
-  Divider,
 } from "@material-ui/core";
+import "../Components/fonts.css";
+
+
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton
+} from "react-share";
+
 
 const styles = makeStyles((muiBaseTheme) => ({
   grid: {
@@ -29,21 +38,20 @@ const styles = makeStyles((muiBaseTheme) => ({
     minHeight: "391px",
   },
   card: {
-    minWidth: 0,
-    marginLeft: "15px",
-    marginRight: "15px",
-    margin: "auto",
-    transition: "0.3s",
-    minHeight: "391px",
-    borderRadius: ".625rem!important",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)",
+    flexGrow: 1,
+    marginTop: "2rem",
+    borderRadius: "22px",
+    width: "368px",
+    marginLeft: "3.8rem",
+    justifyContent:"space-evenly",
+    boxShadow: "0px 4px 13px rgba(159, 153, 255, 0.11)",
     "&:hover": {
-      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
-    },
+			boxShadow: "4px 20px 32px rgba(158, 175, 201, 0.5)"
+		}
   },
   media: {
-    minHeight: "10rem",
-    position: "relative",
+    width: "452px",
+    height: "15.8rem",
   },
   content: {
     textAlign: "left",
@@ -53,31 +61,37 @@ const styles = makeStyles((muiBaseTheme) => ({
     margin: `${muiBaseTheme.spacing(2)}px 0`,
   },
   heading: {
-    fontFamily: "sans-serif",
-    fontSize: "18px",
-    fontWeight: "bold",
-    color: "#5e72eb",
-    "&::hover": {
-      color: "#5e72eb",
-    },
+    fontFamily: "Gotham-Medium",
+    fontSize: "11px",
+    fontWeight: "normal",
+    color: "#393939",
+    lineHeight: "12px",
+    marginTop:"2rem",
+    fontStyle:"normal"
   },
   subheading: {
-    fontFamily: ("Helvetica Neue", "Helvetica", "Arial", "sans-serif"),
+    fontFamily: ("Gotham-Light"),
     fontSize: "14px",
     lineHeight: 1.8,
+    marginTop: "1.5rem",
+    color: "#4B4B4B",
+    fontStyle:"normal"
   },
   avatar: {
     width: "3rem",
     height: "3rem",
     borderRadius: "50%",
     bottom: -136,
-    boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
-    "&:not(:first-of-type)": {
-      marginLeft: -muiBaseTheme.spacing(),
-    },
+    marginTop:"5.8rem"
+  },
+  Readmore: {
+    color: " rgba(55, 43, 255, 1)",
+    cursor: "pointer",
+    fontFamily: "Gotham-bold",
+    fontSize: "10px",
+    marginLeft:"0.4rem",
   },
 }));
-
 const StyledBadge = withStyles((theme) => ({
   badge: {
     display: "flex",
@@ -202,13 +216,12 @@ export default function MediumCard(props) {
               {ShortenText(props.title, 0, 75)}
             </Link>
           </Typography>
-          <Typography className={classes.subheading} variant="body1">
+          <Typography className={classes.subheading} variant="body1" color="textSecondary">
             {ShortenText(ToText(props.content), 0, 120) + "..."}
           </Typography>
         </CardContent>
-        <Divider className={classes.divider} />
         <CardActions
-          style={{ paddingLeft: "1.5625rem", paddingRight: "1.5625rem" }}
+          style={{ paddingLeft: "1.5625rem", paddingRight: "1.5625rem", marginTop: "3rem"}}
         >
           <Grid>
             <Typography
@@ -220,7 +233,10 @@ export default function MediumCard(props) {
               variant="body1"
               gutterBottom
             >
-              <FontAwesomeIcon icon={faUser} /> {props.author}
+              <h4 className={classes.Readmore}>
+                Read More
+              </h4>
+              
             </Typography>
           </Grid>
           {/* <Grid>
@@ -244,11 +260,11 @@ export default function MediumCard(props) {
             }}
             showLabels
             className={classes.root}
-            style={{marginLeft:"14px",Color:"#5e72eb" , fontSize: "24px"}}
+            style={{marginLeft:"14px",Color:"#5e72eb",justifyContent:"space-evenly"}}
           >
-            <BottomNavigationAction label="view" icon={<VisibilitySharp />} />
-            <BottomNavigationAction label="Like" icon={<FavoriteIcon />} />
-            <BottomNavigationAction label="share" icon={<ShareSharpIcon />} />
+            <BottomNavigationAction label="view" icon={<VisibilitySharp  style={{fontSize:"16px"}}/>} />
+            <BottomNavigationAction label="Like" icon={<FavoriteIcon style={{fontSize:"16px"}}/>} />
+            <BottomNavigationAction label="share" icon={<ShareSharpIcon style={{fontSize:"16px"}}/>} />
           </BottomNavigation>
         </CardActions>
       </Card>

@@ -27,7 +27,7 @@ import Profile3 from "../images/profile3.jfif";
 import Profile4 from "../images/profile4.jfif";
 import Profile5 from "../images/profile5.jfif";
 import Profile6 from "../images/profile6.jfif";
-import "../Components/fonts.css";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -32,3 +32,17 @@
     font-weight: 700;
     src: url("https://fonts.animaapp.com/Gotham-Book") format("opentype");
   }
+
+  @font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Gotham-Medium";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/Gotham-Medium") format("opentype");
+  }
